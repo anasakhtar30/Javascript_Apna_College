@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <p id="mypara">This is first paragraph</p>
+    <button onclick="mypara()">click to change</button>
+
+    <script>
+        function mypara(){
+            document.getElementById("mypara").innerText = "Welcome to Javascript";
+            document.getElementById("mypara").style.color = "blue";
+            document.getElementById("mypara").style.fontSize = "20px";
+
+        }
+    </script>
+
+</body>
+</html>

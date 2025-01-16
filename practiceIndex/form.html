@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form id="myform" onsubmit="return validateForm()">
+        <label for="username">username</label>
+        <input type="text" id="username" name="username"> <br><br>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email"> <br><br>
+
+        <input type="submit" value="Submit">
+        <p id="error" style="color: red;"></p>
+    </form>
+
+    <script>
+        function validateForm(){
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let error = "";
+
+            if(username === ""){
+                error += "enter valid username"
+            }else if(!email.includes("@")){
+                error += "enter valid email"
+            }
+            if(error !== ""){
+                document.getElementById("error").innerText = error
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

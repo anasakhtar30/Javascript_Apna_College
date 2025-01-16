@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+</head>
+<body>
+    <h1>Guess Game</h1>
+    <input type="number", id="myid", placeholder="Guess number">
+    <button onclick="guess()">Guess</button>
+    <p id="result"></p>
+
+    <script>
+        let rand = Math.floor(Math.random() * 100) + 1
+        function guess(){
+            let guessnumber = document.getElementById('myid').value;
+            if(guessnumber == rand){
+                document.getElementById('result').innerText = alert('You Won')
+            }else if(guessnumber < rand){
+                document.getElementById('result').innerText = 'To Low , Try Again'
+            }else{
+                document.getElementById('result').innerText = 'To high , Try Again'
+            }
+        }
+    </script>
+</body>
+</html>

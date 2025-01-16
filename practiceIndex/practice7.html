@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="mypara">I will be hidden if you just click the button</p>
+    <button onclick="toggleVisibility()">click me</button>
+
+    <script>
+        function toggleVisibility(){
+            let para = document.getElementById("mypara");
+            if(para.style.display == "none"){
+                document.getElementById("mypara").classList.toggle("highlight");
+                para.style.display = "block";
+            }else{
+                para.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

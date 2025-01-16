@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-List</title>
+</head>
+<body>
+    <input type="text" id="newItem" placeholder="Add a new item">
+    <button onclick="addItem()">Add</button>
+    <ul id="todolist"></ul>
+    <script>
+        function addItem(){
+            let item = document.getElementById("newItem").value;
+            if(item === ""){
+                alert("Please add something to it");
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
+
+

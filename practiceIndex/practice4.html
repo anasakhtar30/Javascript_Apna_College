@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="mypara">Click the button to highlight me!</p>
+    <button onclick="toggleLight()">Toggle highlight</button>
+
+    <script>
+        function toggleLight(){
+            document.getElementById("mypara").classList.toggle("highlight")
+        }
+    </script>
+</body>
+</html>
